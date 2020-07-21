@@ -15,7 +15,11 @@ body {
 
 ul {
   list-style: none;
-  padding-left: 1rem;
+  padding: 0 0.3rem;
+}
+
+ul > li {
+  margin-bottom: 0.6rem;
 }
 
 .header {
@@ -57,7 +61,11 @@ ul {
 
 .btns {
   display: flex;
-  justify-content: space-around;
+  flex-flow: column;
+}
+
+.btns > *:not(:last-child) {
+  margin-bottom: 0.4rem;
 }
 
 .open-pages-btn,
@@ -69,22 +77,23 @@ ul {
   padding: 0.5rem;
   cursor: pointer;
   transition: all 0.4s;
+  border-radius: 1rem;
 }
 
 .open-pages-btn:hover {
   background-color: rgba(51, 152, 219, 0.8);
-  transform: translateY(-0.1rem);
+  /* transform: translateY(-0.05rem); */
 }
 
 .open-pages-btn:active {
-  background-color: rgba(51, 152, 219, 0.4);
+  background-color: rgba(51, 152, 219, 0.6);
   transform: translateY(0);
 }
 
 .open-pages-btn[disabled],
 .open-pages-btn[disabled]:hover {
   cursor: not-allowed;
-  background-color: rgba(189, 193, 196, 0.8);
+  background-color: rgba(189, 193, 196, 0.6);
   transform: translateY(0);
 }
 
