@@ -1,0 +1,110 @@
+:root {
+  --main-back-color: #313131;
+  --main-color: #fcfcfc;
+}
+
+body {
+  background-color: var(--main-back-color);
+  min-height: 14rem;
+  min-width: 14rem;
+  color: var(--main-color);
+  display: flex;
+  flex-flow: column;
+  width: max-content;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.header {
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.content {
+  padding: 0.6rem;
+  padding-bottom: 0.2rem;
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+}
+
+.content > *:not(:last-child) {
+  margin-bottom: 0.6rem;
+}
+
+.list {
+  flex: 1;
+}
+
+.empty-list {
+  text-align: center;
+  padding: 0;
+}
+
+.list-item {
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: opacity 0.2s;
+}
+
+.list-item:hover {
+  opacity: 0.6;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.open-pages-btn,
+.open-pages-btn:focus {
+  background-color: #3498db;
+  outline: none;
+  color: #fcfcfc;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.open-pages-btn:hover {
+  background-color: rgba(51, 152, 219, 0.8);
+  transform: translateY(-0.1rem);
+}
+
+.open-pages-btn:active {
+  background-color: rgba(51, 152, 219, 0.4);
+  transform: translateY(0);
+}
+
+.open-pages-btn[disabled],
+.open-pages-btn[disabled]:hover {
+  cursor: not-allowed;
+  background-color: rgba(189, 193, 196, 0.8);
+  transform: translateY(0);
+}
+
+.bottom-btns {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bottom-btns-item {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-btns-item > * {
+  cursor: pointer;
+}
+
+::selection {
+  background-color: #1778b9;
+  color: #fcfcfc;
+}

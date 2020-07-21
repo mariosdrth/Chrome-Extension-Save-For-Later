@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1 class="header">Pages Saved for Later</h1>
+    <div class="content">
+      <div class="list">
+        <ul class="empty-list" id="pages-list"></ul>
+      </div>
+      <div class="btns">
+        <button class="open-pages-btn" id="btn-save-page">Save Page</button>
+        <button class="open-pages-btn" id="btn-open-selected" disabled>Open All</button>
+      </div>
+      <div class="bottom-btns">
+        <div class="bottom-btns-item">
+          <label for="remove">Delete on open</label>
+          <input type="checkbox" name="remove" id="remove" checked />
+        </div>
+        <div class="bottom-btns-item">
+          <label for="theme">Dark Theme</label>
+          <input type="checkbox" name="theme" id="theme" checked />
+        </div>
+      </div>
+    </div>
+    <script src="content.js"></script>
+  </body>
+</html>
