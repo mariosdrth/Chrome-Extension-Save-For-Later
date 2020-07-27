@@ -5,6 +5,7 @@
   </head>
   <body>
     <h1 class="header">Pages Saved for Later</h1>
+    <hr id="header-seperator" />
     <div class="content">
       <div class="list">
         <ul class="empty-list" id="pages-list"></ul>
@@ -15,15 +16,8 @@
         <button class="open-pages-btn" id="btn-open-all" disabled>Open All</button>
         <button class="open-pages-btn" id="btn-remove-all" disabled>Remove All</button>
       </div>
-      <div class="bottom-btns">
-        <div class="bottom-btns-item">
-          <label for="remove">Delete on open</label>
-          <input type="checkbox" name="remove" id="remove" checked />
-        </div>
-        <div class="bottom-btns-item">
-          <label for="theme">Dark Theme</label>
-          <input type="checkbox" name="theme" id="theme" checked />
-        </div>
+      <div class="options">
+        <a id="options-link">Options</a>
       </div>
     </div>
     <script src="content.js"></script>

@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Save page for later",
   "manifest_version": 2,
-  "web_accessible_resources": ["style.css"],
+  "web_accessible_resources": ["style.css", "options-style.css"],
   "permissions": ["storage", "tabs"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
   },
   "browser_action": {
     "default_popup": "popup.html",
