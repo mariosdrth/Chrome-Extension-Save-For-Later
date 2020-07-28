@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('options-link').addEventListener('click', () => {
     chrome.runtime.openOptionsPage();
   });
+  document.getElementById('modal-close').addEventListener('click', () => document.getElementById('error-modal').classList.add('invisible'));
 });
 
 const updateList = (savedPagesPassed, initial = false) => {
@@ -68,7 +69,8 @@ const savePage = (response) => {
   savedPagesUpdated.push(response.currentTab);
   chrome.storage.sync.set({ savedPagesInStorage: savedPagesUpdated }, () => {
     if (chrome.runtime.lastError) {
-      return alert('Storage Limit Reached');
+      document.getElementById('error-modal').classList.remove('invisible');
+      return;
     } else {
       savedPages = savedPagesUpdated.slice();
       updateList(savedPages);
@@ -81,7 +83,8 @@ const savePagesAll = (response) => {
   response.currentTabs.forEach((page) => savedPagesUpdated.push(page));
   chrome.storage.sync.set({ savedPagesInStorage: savedPagesUpdated }, () => {
     if (chrome.runtime.lastError) {
-      return alert('Storage Limit Reached');
+      document.getElementById('error-modal').classList.remove('invisible');
+      return;
     } else {
       savedPages = savedPagesUpdated.slice();
       updateList(savedPages);
